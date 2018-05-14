@@ -1,0 +1,30 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="contacts.test.moviesdatabase.Movies_fragment">
+
+    <RelativeLayout
+         android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.TabLayout
+          android:layout_width="match_parent"
+          android:layout_alignParentTop="true"
+          android:layout_height="wrap_content"
+          app:tabTextColor="@color/text_tablayout"
+          app:tabSelectedTextColor="@android:color/white"
+          android:background="@color/background_color_tablayout"
+          android:id="@+id/tablayout_Movies">
+
+      </android.support.design.widget.TabLayout>
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tablayout_Movies"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/view_pager_movies"></android.support.v4.view.ViewPager>
+    </RelativeLayout>
+</FrameLayout>

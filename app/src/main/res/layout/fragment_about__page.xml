@@ -1,0 +1,55 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context="contacts.test.moviesdatabase.About_Page">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@mipmap/about_icon"-->
+                <!--android:layout_gravity="center_horizontal"/>-->
+            <!---->
+             <!--<TextView-->
+                 <!--android:layout_width="match_parent"-->
+                 <!--android:layout_height="wrap_content"-->
+                 <!--android:textSize="@dimen/text14"-->
+                 <!--android:padding="10dp"-->
+                 <!--android:textColor="@color/text_color"-->
+                 <!--android:text="Movie and Tv Shows detail"-->
+                 <!--android:gravity="center_horizontal"/>-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_120sdp"
+                android:src="@drawable/movie_logo"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text12"
+                android:padding="10dp"
+                android:textColor="@color/text_color"
+                android:text="Created by Sohit Sharma"
+                android:gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

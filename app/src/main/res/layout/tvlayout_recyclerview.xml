@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical">
+
+          <ImageView
+              android:layout_width="match_parent"
+              android:layout_height="200dp"
+              android:adjustViewBounds="true"
+              android:scaleType="fitXY"
+              android:id="@+id/tv_recyclerview_layout_image"/>
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="ttt"
+             android:ellipsize="end"
+             android:padding="4dp"
+             android:singleLine="true"
+             android:textSize="@dimen/text13"
+             android:id="@+id/tv_recyclerview_layout_title"/>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal">
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_weight="1">
+
+                 <ImageView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:layout_gravity="center_vertical"
+                     android:adjustViewBounds="true"
+                     android:src="@mipmap/date_icon"/>
+
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="0.3"
+                     android:padding="3dp"
+                     android:id="@+id/tv_recyclerview_layout_date_text"
+                     android:textSize="@dimen/text10"
+                    android:layout_gravity="center_vertical"
+                     android:text="text"/>
+
+             </LinearLayout>
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal"
+                 android:layout_weight="1">
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="0.3"
+                     android:gravity="right"
+                     android:padding="3dp"
+                     android:id="@+id/tv_recyclerview_layout_rate_text"
+                     android:textSize="@dimen/text10"
+                    android:layout_gravity="center_vertical"
+                     android:text="text"/>
+
+                 <ImageView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:layout_gravity="center_vertical"
+                     android:adjustViewBounds="true"
+                     android:src="@mipmap/star_icon"/>
+             </LinearLayout>
+
+         </LinearLayout>
+
+     </LinearLayout>
+
+</android.support.v7.widget.CardView>

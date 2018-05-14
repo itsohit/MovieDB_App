@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#081c24</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="background_color">#081c24</color>
+    <color name="background_color_light">#40ffffff</color>
+    <color name="black_color_opacity">#20000000</color>
+    <color name="background_color_tablayout">#90000000</color>
+    <color name="text_tablayout">#30ffffff</color>
+    <color name="text_color">#10d57f</color>
+    <color name="transparent_white">#40ffffff</color>
+    <color name="tabBackgroundcolor">#5A9276</color>
+    <color name="background_page">#f4f4f4</color>
+    <color name="background_white">#eeeeee</color>
+    <color name="black_color">#081c24</color>
+    <color name="white_light">#ECF0F1</color>
+    <color name="movie_tab">#F7F9F9</color>
+    <color name="detail_title_bg">#0c212d</color>
+    <color name="detail_imformation_bg">#102939</color>
+    <color name="detial_text_color">#afb7bc</color>
+    <color name="login_button">#27ae61</color>
+    <color name="login_textview">#f9fff8</color>
+</resources>

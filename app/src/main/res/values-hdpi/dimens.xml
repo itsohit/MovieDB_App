@@ -1,0 +1,26 @@
+<resources>
+	<dimen name="text12">14.4dp</dimen>
+	<dimen name="fab_margin">19.2dp</dimen>
+	<dimen name="text15">18dp</dimen>
+	<dimen name="text26">31.2dp</dimen>
+	<dimen name="text14">16.8dp</dimen>
+	<dimen name="text28">33.6dp</dimen>
+	<dimen name="text16">19.2dp</dimen>
+	<dimen name="text18">21.6dp</dimen>
+	<dimen name="text20">24dp</dimen>
+	<dimen name="text30">36dp</dimen>
+	<dimen name="activity_vertical_margin">19.2dp</dimen>
+	<dimen name="text_margin">19.2dp</dimen>
+	<dimen name="text22">26.4dp</dimen>
+	<dimen name="nav_header_vertical_spacing">19.2dp</dimen>
+	<dimen name="text32">38.4dp</dimen>
+	<dimen name="text10">12dp</dimen>
+	<dimen name="text13">15.6dp</dimen>
+	<dimen name="text24">28.8dp</dimen>
+	<dimen name="activity_horizontal_margin">19.2dp</dimen>
+	<dimen name="nav_header_height">192dp</dimen>
+	<dimen name="app_bar_height">216dp</dimen>
+	<dimen name="height_layout">204dp</dimen>
+	<dimen name="width_layout">100dp</dimen>
+	<dimen name="imageheightlayout">200dp</dimen>
+</resources>

@@ -1,0 +1,180 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_discover"
+    tools:context="contacts.test.moviesdatabase.Home_Fragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Discover"
+            android:padding="5dp"
+            android:id="@+id/discover_title"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/white"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/_20sdp"/>
+
+        <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@android:color/white"-->
+            <!--android:hint="Search"-->
+            <!--android:focusedByDefault="false"-->
+            <!--android:textSize="@dimen/text14"-->
+            <!--android:id="@+id/search_all"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:padding="5dp"-->
+            <!--android:layout_below="@+id/discover_title"/>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/discover_title">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/white_light">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_220sdp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="#F7F9F9">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Movies"
+                            android:layout_weight="1"
+                            android:layout_margin="3dp"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_15sdp"
+                            android:padding="5dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="More"
+                            android:gravity="right"
+                            android:layout_weight="1"
+                            android:layout_margin="3dp"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_15sdp"
+                            android:padding="5dp"/>
+
+
+                    </LinearLayout>
+
+                    <!--<ListView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+
+                        <!--android:id="@+id/descover_movie_gridview"></ListView>-->
+
+                            <android.support.v7.widget.RecyclerView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_margin="4dp"
+                                android:id="@+id/descover_movie_recyclerview"></android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="8dp"
+                app:cardBackgroundColor="@color/white_light"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_220sdp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/movie_tab">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tv Shows"
+                            android:layout_weight="1"
+                            android:layout_margin="3dp"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_15sdp"
+                            android:padding="5dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="More"
+                            android:gravity="right"
+                            android:layout_weight="1"
+                            android:layout_margin="3dp"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/_15sdp"
+                            android:padding="5dp"/>
+
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/descover_tvShows_recyclerview"></android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Tv Shows"-->
+                <!--android:background="@color/transparent_white"-->
+                <!--android:layout_margin="3dp"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--android:textSize="@dimen/text18"-->
+                <!--android:padding="8dp"/>-->
+
+            <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="3dp"-->
+                <!--android:id="@+id/descover_tvShows_recyclerview"></android.support.v7.widget.RecyclerView>-->
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>
