@@ -4,7 +4,6 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.constraint.ConstraintLayout;
 import android.support.v4.app.Fragment;
 import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
@@ -26,8 +25,6 @@ public class Detail_Page extends Fragment {
         String poster,backposter,name,overview,releasedate;
         ImageView frontposter,backimage;
        TextView titlename,detail,date;
-     ConstraintLayout constraintLayout;
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,17 +45,14 @@ public class Detail_Page extends Fragment {
                 backimage = (ImageView) v.findViewById(R.id.background_img_detailPage);
                 titlename = (TextView) v.findViewById(R.id.textview_titlename_detailPage);
                 detail = (TextView) v.findViewById(R.id.textview_overview_detialPage);
-                constraintLayout  = (ConstraintLayout) v.findViewById(R.id.detail_constraintLayout);
                 date = (TextView) v.findViewById(R.id.releasedate_detailPage);
 
-                constraintLayout.setVisibility(View.INVISIBLE);
                 titlename.setText(name);
                 detail.setText(overview);
                 date.setText("Release Date : "+releasedate);
         Glide.with(getActivity()).load(poster).into(frontposter);
         Glide.with(getContext()).load(backposter).into(backimage);
-        detail.setMovementMethod(new ScrollingMovementMethod());
-            constraintLayout.setVisibility(View.VISIBLE);
+
 
         return v;
     }

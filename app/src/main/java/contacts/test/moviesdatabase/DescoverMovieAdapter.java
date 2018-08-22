@@ -77,7 +77,7 @@ class DescoverMovieAdapter extends RecyclerView.Adapter<DescoverMovieAdapter.Inn
         @Override
         public void onClick(View v) {
             Result r = result.get(getAdapterPosition());
-            adapterOnItemClick.onClickItem(v,getAdapterPosition(),urlImage+""+r.getPosterPath(),urlImage+""+r.getBackdropPath(),r.getTitle(),r.getOverview(),r.getReleaseDate());
+            adapterOnItemClick.onClickItem(v,getAdapterPosition(),urlImage+""+r.getPosterPath(),urlImage+""+r.getBackdropPath(),r.getTitle(),r.getOverview(),r.getReleaseDate(),r.getVoteAverage(),r.getVoteCount());
         }
     }
 }

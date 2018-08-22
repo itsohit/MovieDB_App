@@ -1,5 +1,6 @@
 package contacts.test.moviesdatabase;
 
+
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;

@@ -1,218 +1,203 @@
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:scrollbars="vertical"
-    android:id="@+id/detail_constraintLayout"
+    android:orientation="vertical"
     android:background="@color/detail_imformation_bg"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="contacts.test.moviesdatabase.Detail_Page">
 
-    <!--<ProgressBar-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_gravity="center"-->
-        <!--android:visibility="visible"-->
-        <!--android:id="@+id/progress_bar_detailPage"/>-->
 
-            <!--<android.support.constraint.ConstraintLayout-->
-                <!--android:layout_width="304dp"-->
-                <!--android:layout_height="493dp"-->
-                <!--android:id="@+id/detail_constraintLayout"-->
-                <!--tools:layout_editor_absoluteY="8dp"-->
-                <!--tools:layout_editor_absoluteX="8dp">-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_190sdp"
+        android:src="@drawable/backposterimage"
+        android:scaleType="fitXY"
+        android:id="@+id/background_img_detailPage" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Overview"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#e4e4e4"
+        android:padding="8dp"
+        android:textSize="@dimen/text13"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
 
         <ImageView
-            android:layout_width="0dp"
-            android:layout_height="@dimen/_190sdp"
-            android:src="@drawable/backposterimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/posterimage"
             android:adjustViewBounds="true"
             android:scaleType="fitXY"
-            android:id="@+id/background_img_detailPage"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent" />
+            android:alpha="0.2"
+            android:id="@+id/poster_image_detailPage"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_25sdp">
+
+                <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title Name"
+                android:textStyle="bold"
+                android:id="@+id/textview_titlename_detailPage"
+                android:textColor="@color/detial_text_color"
+                android:textSize="@dimen/_18sdp"
+                android:padding="@dimen/_4sdp"/>
+
+
+
+            </LinearLayout>
+
+
+    </RelativeLayout>
 
     <!--<ImageView-->
-            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/_190sdp"-->
+            <!--android:src="@drawable/backposterimage"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:id="@+id/background_img_detailPage" />-->
+
+
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
             <!--android:layout_height="wrap_content"-->
-            <!--android:src="@drawable/posterimage"-->
-            <!--android:adjustViewBounds="true"-->
-        <!--app:layout_constraintHorizontal_weight=""-->
-            <!--android:id="@+id/poster_image_detailPage"-->
-            <!--android:layout_marginLeft="25dp"-->
-            <!--android:layout_marginRight="20dp"/>-->
-
-
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:weightSum="1.8"
-            app:layout_constraintTop_toBottomOf="@+id/background_img_detailPage"
-            app:layout_constraintBottom_toBottomOf="@+id/background_img_detailPage"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:orientation="horizontal"
-            android:id="@+id/poster_linearLayout">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/posterimage"
-                    android:adjustViewBounds="true"
-                    android:id="@+id/poster_image_detailPage"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="20dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.8">
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:orientation="vertical"
-            app:layout_constraintTop_toBottomOf="@+id/background_img_detailPage"
-            app:layout_constraintVertical_bias="0.0">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="1.8">
-
-                  <Space
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:layout_weight="1"/>
-
-              <LinearLayout
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content"
-                  android:layout_weight="0.8"
-                  android:orientation="vertical">
-
-                  <TextView
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:text="Title Name"
-                      android:textStyle="bold"
-                      android:id="@+id/textview_titlename_detailPage"
-                      android:textColor="@color/detial_text_color"
-                      android:textSize="@dimen/_18sdp"
-                      android:padding="@dimen/_4sdp"/>
-
-                   <TextView
-                       android:layout_width="match_parent"
-                       android:layout_height="wrap_content"
-                       android:text="Release Date"
-                       android:id="@+id/releasedate_detailPage"
-                       android:textColor="@color/detial_text_color"
-                       android:textSize="@dimen/_14sdp"
-                       android:paddingLeft="5dp"
-                       />
-              </LinearLayout>
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="19dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/poster_linearLayout"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:orientation="vertical"
-            app:layout_constraintVertical_bias="0.0"
-            android:layout_marginStart="19dp">
-
-             <TextView
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:text="Overview:"
-                 android:textSize="@dimen/_18sdp"
-                 android:textColor="@color/detial_text_color"
-                 android:textStyle="bold"
-                 android:padding="5dp"/>
-
-             <TextView
-                 android:layout_width="match_parent"
-                 android:layout_height="wrap_content"
-                 android:text="details of overview movies"
-                 android:textSize="@dimen/_14sdp"
-                 android:layout_marginLeft="5dp"
-                 android:layout_marginRight="8dp"
-                 android:padding="3dp"
-                 android:scrollbars="vertical"
-                 android:id="@+id/textview_overview_detialPage"
-                 android:textColor="@color/detial_text_color"/>
-
-        </LinearLayout>
-
-        <!--<ImageView-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:src="@mipmap/ic_launcher"-->
+            <!--android:weightSum="1.8"-->
             <!--app:layout_constraintTop_toBottomOf="@+id/background_img_detailPage"-->
             <!--app:layout_constraintBottom_toBottomOf="@+id/background_img_detailPage"-->
             <!--app:layout_constraintLeft_toLeftOf="parent"-->
-            <!--android:id="@+id/poster_image_detailPage"-->
-            <!--app:layout_constraintHorizontal_bias="0.16"-->
-            <!--app:layout_constraintRight_toRightOf="parent"/>-->
+            <!--app:layout_constraintRight_toRightOf="parent"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:id="@+id/poster_linearLayout">-->
 
-            <!--<TextView-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
                 <!--android:layout_height="wrap_content"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:text="Name"-->
-                <!--android:textSize="@dimen/text18"-->
-                <!--android:textStyle="bold"-->
-                <!--android:id="@+id/textview_titlename_detailPage"-->
-                <!--app:layout_constraintTop_toBottomOf="@+id/background_img_detailPage"-->
-                <!--android:layout_marginLeft="10dp"-->
-                <!--android:layout_marginTop="10dp"-->
-                <!--app:layout_constraintLeft_toRightOf="@+id/poster_image_detailPage"-->
-                <!--android:layout_marginStart="10dp" />-->
+                <!--android:layout_weight="1">-->
 
-            <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
+                <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:src="@drawable/posterimage"-->
+                    <!--android:adjustViewBounds="true"-->
+                    <!--android:id="@+id/poster_image_detailPage"-->
+                    <!--android:layout_marginLeft="25dp"-->
+                    <!--android:layout_marginRight="20dp"/>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
                 <!--android:layout_height="wrap_content"-->
-                <!--android:text="Overview"-->
-                <!--android:fontFamily="sans-serif"-->
-                <!--android:textSize="@dimen/text18"-->
-                <!--app:layout_constraintTop_toBottomOf="@+id/poster_image_detailPage"-->
-                <!--android:id="@+id/textview_overview"-->
-                <!--app:layout_constraintRight_toRightOf="parent"-->
-                <!--app:layout_constraintLeft_toLeftOf="parent"-->
-                <!--app:layout_constraintHorizontal_bias="0.098" />-->
+                <!--android:layout_weight="0.8">-->
 
-            <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
+            <!--</LinearLayout>-->
+
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--app:layout_constraintRight_toRightOf="parent"-->
+            <!--android:orientation="vertical"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/background_img_detailPage"-->
+            <!--app:layout_constraintVertical_bias="0.0">-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
                 <!--android:layout_height="wrap_content"-->
-                <!--android:text="details"-->
-                <!--android:id="@+id/textview_overview_detialPage"-->
-                <!--app:layout_constraintRight_toRightOf="parent"-->
-                <!--app:layout_constraintLeft_toLeftOf="parent"-->
-                <!--app:layout_constraintTop_toBottomOf="@+id/textview_overview"-->
-                <!--android:layout_marginTop="1dp"-->
-                <!--app:layout_constraintHorizontal_bias="0.154" />-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1.8">-->
 
-</android.support.constraint.ConstraintLayout>
+                  <!--<Space-->
+                      <!--android:layout_width="match_parent"-->
+                      <!--android:layout_height="wrap_content"-->
+                      <!--android:layout_weight="1"/>-->
+
+              <!--<LinearLayout-->
+                  <!--android:layout_width="match_parent"-->
+                  <!--android:layout_height="wrap_content"-->
+                  <!--android:layout_weight="0.8"-->
+                  <!--android:orientation="vertical">-->
+
+                  <!--<TextView-->
+                      <!--android:layout_width="match_parent"-->
+                      <!--android:layout_height="wrap_content"-->
+                      <!--android:text="Title Name"-->
+                      <!--android:textStyle="bold"-->
+                      <!--android:id="@+id/textview_titlename_detailPage"-->
+                      <!--android:textColor="@color/detial_text_color"-->
+                      <!--android:textSize="@dimen/_18sdp"-->
+                      <!--android:padding="@dimen/_4sdp"/>-->
+
+                   <!--<TextView-->
+                       <!--android:layout_width="match_parent"-->
+                       <!--android:layout_height="wrap_content"-->
+                       <!--android:text="Release Date"-->
+                       <!--android:id="@+id/releasedate_detailPage"-->
+                       <!--android:textColor="@color/detial_text_color"-->
+                       <!--android:textSize="@dimen/_14sdp"-->
+                       <!--android:paddingLeft="5dp"-->
+                       <!--/>-->
+              <!--</LinearLayout>-->
+            <!--</LinearLayout>-->
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="19dp"-->
+            <!--app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--app:layout_constraintRight_toRightOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/poster_linearLayout"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--android:orientation="vertical"-->
+            <!--app:layout_constraintVertical_bias="0.0"-->
+            <!--android:layout_marginStart="19dp">-->
+
+             <!--<TextView-->
+                 <!--android:layout_width="wrap_content"-->
+                 <!--android:layout_height="wrap_content"-->
+                 <!--android:text="Overview:"-->
+                 <!--android:textSize="@dimen/_18sdp"-->
+                 <!--android:textColor="@color/detial_text_color"-->
+                 <!--android:textStyle="bold"-->
+                 <!--android:padding="5dp"/>-->
+
+             <!--<TextView-->
+                 <!--android:layout_width="match_parent"-->
+                 <!--android:layout_height="wrap_content"-->
+                 <!--android:text="details of overview movies"-->
+                 <!--android:textSize="@dimen/_14sdp"-->
+                 <!--android:layout_marginLeft="5dp"-->
+                 <!--android:layout_marginRight="8dp"-->
+                 <!--android:padding="3dp"-->
+                 <!--android:scrollbars="vertical"-->
+                 <!--android:id="@+id/textview_overview_detialPage"-->
+                 <!--android:textColor="@color/detial_text_color"/>-->
+
+        <!--</LinearLayout>-->
+</LinearLayout>
+</ScrollView>
