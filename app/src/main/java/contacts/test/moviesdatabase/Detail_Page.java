@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 import com.bumptech.glide.request.target.Target;
 
 import static android.R.attr.fragment;
@@ -24,7 +25,9 @@ import static android.R.attr.fragment;
 public class Detail_Page extends Fragment {
         String poster,backposter,name,overview,releasedate;
         ImageView frontposter,backimage;
-       TextView titlename,detail,date;
+       TextView titlename,detail,date,rateVote;
+       Double voteaverage;
+       int voteCount;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +36,8 @@ public class Detail_Page extends Fragment {
             name = getArguments().getString("Name");
             overview = getArguments().getString("Overview");
             releasedate = getArguments().getString("ReleaseDate");
-
+            voteaverage = getArguments().getDouble("voteAverage");
+            voteCount = getArguments().getInt("voteCount");
     }
 
     @Override
@@ -41,18 +45,19 @@ public class Detail_Page extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v= inflater.inflate(R.layout.fragment_detail__page, container, false);
-                frontposter = (ImageView) v.findViewById(R.id.poster_image_detailPage);
+             //   frontposter = (ImageView) v.findViewById(R.id.poster_image_detailPage);
                 backimage = (ImageView) v.findViewById(R.id.background_img_detailPage);
                 titlename = (TextView) v.findViewById(R.id.textview_titlename_detailPage);
                 detail = (TextView) v.findViewById(R.id.textview_overview_detialPage);
                 date = (TextView) v.findViewById(R.id.releasedate_detailPage);
+                rateVote = (TextView) v.findViewById(R.id.ratevote_tv_detailPage);
 
                 titlename.setText(name);
                 detail.setText(overview);
+                rateVote.setText("Rate : "+voteaverage+"/10 | Vote : "+voteCount);
                 date.setText("Release Date : "+releasedate);
-        Glide.with(getActivity()).load(poster).into(frontposter);
+     //   Glide.with(getContext()).load(poster).into(frontposter);
         Glide.with(getContext()).load(backposter).into(backimage);
-
 
         return v;
     }

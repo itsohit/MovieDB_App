@@ -62,7 +62,7 @@ class ResultAdapter extends RecyclerView.Adapter<ResultAdapter.InnerClass>{
         @Override
         public void onClick(View v) {
              Result r = result.get(getAdapterPosition());
-            adapterOnItemClick.onClickItem(v,getAdapterPosition(),urlimage+""+r.getPosterPath(),urlimage+""+r.getBackdropPath(),r.getTitle(),r.getOverview(),r.getReleaseDate());
+            adapterOnItemClick.onClickItem(v,getAdapterPosition(),urlimage+""+r.getPosterPath(),urlimage+""+r.getBackdropPath(),r.getTitle(),r.getOverview(),r.getReleaseDate(),r.getVoteAverage(),r.getVoteCount());
         }
     }
 }

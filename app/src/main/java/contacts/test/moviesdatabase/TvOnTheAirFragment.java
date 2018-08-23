@@ -55,7 +55,7 @@ public class TvOnTheAirFragment extends Fragment {
             return  v;
     }AdapterOnItemClick adapterOnItemClick = new AdapterOnItemClick() {
         @Override
-        public void onClickItem(View view, int position, String poster, String backposter, String name, String overview, String releasedate) {
+        public void onClickItem(View view, int position, String poster, String backposter, String name, String overview, String releasedate,Double voteAverage,int vcount) {
             Detail_Page detail_page = new Detail_Page();
             Bundle bundle = new Bundle();
             bundle.putString("poster",poster);
@@ -63,6 +63,8 @@ public class TvOnTheAirFragment extends Fragment {
             bundle.putString("Name",name);
             bundle.putString("Overview",overview);
             bundle.putString("ReleaseDate",releasedate);
+            bundle.putDouble("voteAverage",voteAverage);
+            bundle.putInt("voteCount",vcount);
             detail_page.setArguments(bundle);
             FragmentTransaction ft =  getFragmentManager().beginTransaction();
             ft.add(R.id.frame_layout_nav,detail_page).addToBackStack(null).commit();

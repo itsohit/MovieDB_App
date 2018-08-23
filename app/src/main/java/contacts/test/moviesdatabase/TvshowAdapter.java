@@ -68,7 +68,7 @@ class TvshowAdapter extends RecyclerView.Adapter<TvshowAdapter.InnerClass>{
         @Override
         public void onClick(View v) {
             DescoverTvResult r = result.get(getAdapterPosition());
-            adapterOnItemClick.onClickItem(v,getAdapterPosition(),imageUrl+""+r.getPosterPath(),imageUrl+""+r.getBackdropPath(),r.getOriginalName(),r.getOverview(),r.getFirstAirDate());
+            adapterOnItemClick.onClickItem(v,getAdapterPosition(),imageUrl+""+r.getPosterPath(),imageUrl+""+r.getBackdropPath(),r.getOriginalName(),r.getOverview(),r.getFirstAirDate(),r.getVoteAverage(),r.getVoteCount());
         }
     }
 }

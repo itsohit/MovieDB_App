@@ -7,5 +7,5 @@ import android.view.View;
  */
 
 public interface AdapterOnItemClick {
-    public void onClickItem(View view,int position,String poster,String backposter,String name,String overview,String releasedate);
+    public void onClickItem(View view,int position,String poster,String backposter,String name,String overview,String releasedate,Double voteAverage,int voteCount);
 }

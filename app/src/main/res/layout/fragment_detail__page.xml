@@ -1,15 +1,20 @@
-<ScrollView android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/detail_imformation_bg"
+        android:background="@color/detail_imformation_bg"
+        android:layout_alignParentBottom="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="contacts.test.moviesdatabase.Detail_Page">
 
+        <ScrollView android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical">
 
     <ImageView
         android:layout_width="match_parent"
@@ -22,26 +27,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Overview"
+        android:background="@color/text_view_color_bg"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="#e4e4e4"
         android:padding="8dp"
         android:textSize="@dimen/text13"
         />
-
-    <RelativeLayout
+        <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/posterimage"
-            android:adjustViewBounds="true"
-            android:scaleType="fitXY"
-            android:alpha="0.2"
-            android:id="@+id/poster_image_detailPage"/>
+        <!--<ImageView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@color/detail_imformation_bg_blur"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:id="@+id/poster_image_detailPage"/>-->
 
 
             <LinearLayout
@@ -49,8 +53,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingTop="@dimen/_10sdp"
-                android:layout_marginLeft="@dimen/_25sdp">
-
+                android:layout_marginLeft="@dimen/_22sdp">
+                
                 <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -59,14 +63,39 @@
                 android:id="@+id/textview_titlename_detailPage"
                 android:textColor="@color/detial_text_color"
                 android:textSize="@dimen/_18sdp"
-                android:padding="@dimen/_4sdp"/>
+                    android:padding="3dp"/>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rate/Vote"
+                    android:id="@+id/ratevote_tv_detailPage"
+                    android:textColor="@color/black_blur_tv"
+                    android:textSize="@dimen/text10"
+                    android:padding="3dp"/>
 
-
+                <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Release Date"
+                android:id="@+id/releasedate_detailPage"
+                android:textColor="@color/black_blur_tv"
+                android:textSize="@dimen/text10"
+                    android:padding="3dp"
+                />
+                
+                <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="details of overview movies"
+                android:textSize="@dimen/text12"
+                android:padding="3dp"
+                android:id="@+id/textview_overview_detialPage"
+                android:textColor="@color/detial_overview_info"/>
             </LinearLayout>
 
 
-    </RelativeLayout>
+        </RelativeLayout>
 
     <!--<ImageView-->
             <!--android:layout_width="match_parent"-->
@@ -199,5 +228,6 @@
                  <!--android:textColor="@color/detial_text_color"/>-->
 
         <!--</LinearLayout>-->
-</LinearLayout>
+     </LinearLayout>
 </ScrollView>
+</RelativeLayout>

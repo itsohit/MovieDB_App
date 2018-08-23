@@ -9,6 +9,7 @@
     <color name="background_color_tablayout">#90000000</color>
     <color name="text_tablayout">#30ffffff</color>
     <color name="text_color">#10d57f</color>
+    <color name="text_view_color_bg">#9010d57f</color>
     <color name="transparent_white">#40ffffff</color>
     <color name="tabBackgroundcolor">#5A9276</color>
     <color name="background_page">#f4f4f4</color>
@@ -18,7 +19,10 @@
     <color name="movie_tab">#F7F9F9</color>
     <color name="detail_title_bg">#0c212d</color>
     <color name="detail_imformation_bg">#102939</color>
+    <color name="detail_imformation_bg_blur">#90102939</color>
     <color name="detial_text_color">#afb7bc</color>
     <color name="login_button">#27ae61</color>
     <color name="login_textview">#f9fff8</color>
+    <color name="black_blur_tv">#9b9c9c</color>
+    <color name="detial_overview_info">#d3cec8</color>
 </resources>

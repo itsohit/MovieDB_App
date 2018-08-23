@@ -44,6 +44,8 @@ public class Login_page extends AppCompatActivity implements TextView.OnEditorAc
             password_et = (EditText) findViewById(R.id.password_login);
             forget_btn = (TextView) findViewById(R.id.forget_password_tv);
 
+            email_id.setText("itsohit@gmail.com");
+            password_et.setText("bbtbnghfyf");
             networkCheck = new NetworkCheck(this);
            firebaseAuth = FirebaseAuth.getInstance();
         progress = new ProgressDialog(Login_page.this);
@@ -123,7 +125,6 @@ public class Login_page extends AppCompatActivity implements TextView.OnEditorAc
         Matcher matcher = pattern.matcher(email);
         if(matcher.find())
             return false;
-
         return true;
     }
 

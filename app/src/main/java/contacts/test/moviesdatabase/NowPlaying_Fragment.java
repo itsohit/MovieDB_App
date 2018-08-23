@@ -31,7 +31,8 @@ public class NowPlaying_Fragment extends Fragment {
         // Inflate the layout for this fragment
         View v= inflater.inflate(R.layout.fragment_latest__movies, container, false);
             recyclerView = (RecyclerView) v.findViewById(R.id.recyclerview_nowPlaying);
-        StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
+
+            StringRequest stringRequest = new StringRequest(url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                  Gson gson = new GsonBuilder().create();
@@ -52,7 +53,7 @@ public class NowPlaying_Fragment extends Fragment {
     }
     AdapterOnItemClick adapterOnItemClick = new AdapterOnItemClick() {
         @Override
-        public void onClickItem(View view, int position, String poster, String backposter, String name, String overview, String releasedate) {
+        public void onClickItem(View view, int position, String poster, String backposter, String name, String overview, String releasedate,Double voteAverage,int vcount) {
             Detail_Page detail_page = new Detail_Page();
             Bundle bundle = new Bundle();
             bundle.putString("poster",poster);
@@ -60,6 +61,8 @@ public class NowPlaying_Fragment extends Fragment {
             bundle.putString("Name",name);
             bundle.putString("Overview",overview);
             bundle.putString("ReleaseDate",releasedate);
+            bundle.putDouble("voteAverage",voteAverage);
+            bundle.putInt("voteCount",vcount);
             detail_page.setArguments(bundle);
             FragmentTransaction ft =  getFragmentManager().beginTransaction();
             ft.add(R.id.frame_layout_nav,detail_page).addToBackStack(null).commit();

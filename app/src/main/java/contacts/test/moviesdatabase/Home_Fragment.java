@@ -87,7 +87,7 @@ public class Home_Fragment extends Fragment {
      }
      AdapterOnItemClick adapterOnItemClick = new AdapterOnItemClick() {
          @Override
-         public void onClickItem(View view, int position,String poster,String bkposter,String name,String overview,String releasedate) {
+         public void onClickItem(View view, int position,String poster,String bkposter,String name,String overview,String releasedate,Double voteAverage,int vcount) {
                 Detail_Page detail_page = new Detail_Page();
                     Bundle bundle = new Bundle();
                      bundle.putString("poster",poster);
@@ -95,6 +95,8 @@ public class Home_Fragment extends Fragment {
                      bundle.putString("Name",name);
                      bundle.putString("Overview",overview);
                     bundle.putString("ReleaseDate",releasedate);
+                    bundle.putDouble("voteAverage",voteAverage);
+                    bundle.putInt("voteCount",vcount);
                         detail_page.setArguments(bundle);
              FragmentTransaction ft =  getFragmentManager().beginTransaction();
                 ft.replace(R.id.frame_layout_nav,detail_page).addToBackStack(null).commit();

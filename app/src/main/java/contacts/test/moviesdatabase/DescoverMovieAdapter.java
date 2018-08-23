@@ -50,7 +50,7 @@ class DescoverMovieAdapter extends RecyclerView.Adapter<DescoverMovieAdapter.Inn
            String s[] = d.split("-");
          holder.date.setText(s[0]);
           holder.rating.setText(String.valueOf(descoverResult.getVoteAverage()));
-        Glide.with(holder.image.getContext()).load(urlImage+""+descoverResult.getPosterPath()).into(holder.image);
+        Glide.with(holder.image.getContext()).load(urlImage+""+descoverResult.getPosterPath()).placeholder(R.drawable.back_image).into(holder.image);
 //
      }
 
